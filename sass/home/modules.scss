@@ -1,0 +1,8 @@
+.module{
+    &__card{
+        transition: all 150ms ;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+}
