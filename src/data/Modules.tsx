@@ -1,8 +1,12 @@
-export type Module = {
+type Module = {
     name: string,
-    description: string,
+    module_id?: number,
+    level?:number,
+    description?: string,
     imgPath?: string,
 }
+
+export type { Module }
 
 export const modules : Module[] = []
 
@@ -21,3 +25,13 @@ const FixInvestment: Module = {
 
 modules.push(FixInvestment)
 modules.push(basics)
+
+export let modules2: any
+const modulesFun = async ()=> {
+    
+    const modules = await fetch('https://localhost:8080/api/question/list').then(resp => resp.json)
+    console.log(modules)
+    modules2 = modules
+}
+
+
