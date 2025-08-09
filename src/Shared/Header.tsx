@@ -20,7 +20,7 @@ export default function Header () {
                         </div>
                         <div className="userimg">
                             <div className="userimg__area w-10 h-10 overflow-hidden rounded-full">
-                                <img src={imgPath} alt="" />
+                                <img src={imgPath} alt="" className="" />
                             </div>
                         </div>
                     </div>
